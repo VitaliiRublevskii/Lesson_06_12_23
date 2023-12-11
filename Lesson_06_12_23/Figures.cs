@@ -10,6 +10,7 @@ namespace Lesson_06_12_23
     {
         public Figur[] SetFigurs { get; set; }
         public int CountFigurs {  set; get; }
+        public int ID { set; get; }
 
 
         public Figures () { }
@@ -25,19 +26,16 @@ namespace Lesson_06_12_23
             Figur[] newFigur = new Figur[this.CountFigurs + 1];
             for (int i = 0; i < CountFigurs; i++)
             {
-                if (CountFigurs == 0) { SetFigurs[0] = figur; }
+                if (CountFigurs == 0) { SetFigurs[0] = figur; ID = i; }
                 else
                 {
                     newFigur[i] = SetFigurs[i];
                 }
             }
             SetFigurs[CountFigurs] = figur;
+            ID = CountFigurs;
             SetFigurs = newFigur;
             CountFigurs++;
-
-
-
-
 
         }
 

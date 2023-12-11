@@ -22,9 +22,9 @@ triangle2.PrintFigur();
 triangle3.PrintFigur();
 Console.WriteLine();
 
-Console.WriteLine(triangle1.Perimetr());
-Console.WriteLine(triangle1.AreaFigur());
-
+Console.WriteLine($" Периметр треугольника {triangle1.NameFigur} = {triangle1.Perimetr()}");
+Console.WriteLine($" Площадь треугольника {triangle1.NameFigur} =  {triangle1.AreaFigur()}");
+Console.WriteLine();
 
 // круги
 Figur circle1 = new Сircle("circle1", 5);
@@ -33,14 +33,24 @@ Figur circle3 = new Сircle("circle3", 7);
 circle1.PrintFigur();
 circle2.PrintFigur();
 circle3.PrintFigur();
+Console.WriteLine();
 
-
+Figur rectangle1 = new Rectangle("rect1", 12, 15);
+Figur rectangle2 = new Rectangle("rect2", 10, 11);
+Figur rectangle3 = new Rectangle("rect3", 8, 16);
+rectangle1.PrintFigur();
+rectangle2.PrintFigur();
+rectangle3.PrintFigur();
+Console.WriteLine();
 
 
 
 Figures[] figures1 = new Figures[9];
-//figures1.AddFigurs(circle1);
-//figures1.PrintFigurS();
+
+
+
+figures1.AddFigurs(circle1);
+figures1.PrintFigurS();
 
 
 
