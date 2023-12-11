@@ -11,31 +11,23 @@ namespace Lesson_06_12_23
     internal class Figur
     {
         public string NameFigur {  get; set; }
-        public int CountSide { get; set; }
-        public float SideSize {  get; set; }
-        
         public int CoordX { get; set; }
         public int CoordY { get; set; }
         public double Area { get; set; }
-
-        public float Perim {  get; set; }
+        public double Perim {  get; set; }
 
         public Figur() 
         {
             this.NameFigur = "";
-            this.CountSide = 0;
-            this.SideSize = 0;
             this.CoordX = 0;
             this.CoordY = 0;
             this.Area = 0;
             this.Perim = 0;
 
         }
-        public Figur(string NameFigur, int CountSide, float SideSize, int coordX, int coordY)
+        public Figur(string NameFigur, int coordX, int coordY)
         {
             this.NameFigur = NameFigur;
-            this.CountSide = CountSide;
-            this.SideSize = SideSize;
             this.CoordX = coordX;
             this.CoordY = coordY;
 
@@ -43,8 +35,16 @@ namespace Lesson_06_12_23
 
         public void PrintFigur()
         {
-            Console.WriteLine($" Фигура {NameFigur} имеет {CountSide} сторон, периметр {Perim} и площадь {Area} ");
+            Console.WriteLine($" Фигура {NameFigur} имеет координаты х = {CoordX} y = {CoordY} периметр {Perim} и площадь {Area} ");
             
+        }
+         public virtual double Perimetr() {
+            return 0;
+        }
+
+        public virtual double AreaFigur()
+        {
+            return 0;
         }
 
 
@@ -62,6 +62,8 @@ namespace Lesson_06_12_23
         }
 
         public virtual void AddFigurs(Figur figur) { }
+
+        public virtual void PrintFigurS() { }
 
 
     }

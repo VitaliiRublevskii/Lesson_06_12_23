@@ -41,7 +41,7 @@ namespace Lesson_06_12_23
 
         }
 
-        public void PrintFigurS ()
+        public override void PrintFigurS ()
         {
             for (int i = 0; i < CountFigurs; i++)
             {
